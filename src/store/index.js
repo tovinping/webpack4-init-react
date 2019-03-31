@@ -5,7 +5,7 @@ import category from './category'
 import user from './user'
 
 const loggerMiddleware = createLogger()
-console.log(process.env.NODE_ENV)
+
 const middlewareList = process.env.NODE_ENV !== 'production' ?
 [thunkMiddleware, loggerMiddleware] : [thunkMiddleware]
 let rootReducer = combineReducers({

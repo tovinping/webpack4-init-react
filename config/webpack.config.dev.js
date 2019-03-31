@@ -44,7 +44,7 @@ module.exports = {
   // 装载虚拟目录插件
   plugins: [
     htmlWebpackPlugin,
-    new webpack.NamedModulesPlugin(),
+    new webpack.NamedModulesPlugin(), // 貌似可以看到热更新是哪么文件引起的热更新
     new webpack.HotModuleReplacementPlugin()
   ],
 }

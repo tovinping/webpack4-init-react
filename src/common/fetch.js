@@ -1,3 +1,21 @@
+function fetchTimeout(timeout) {
+  return  new Promise((resolve,reject) => { 
+    setTimeout(()=>{
+      reject(new Error('请求超时'))
+    }, timeout) 
+  })
+}
+
+function utilsResponse(response) {
+  if (response.status >= 500) {
+    throw new Error('服务器出错')
+  } else if (response.status >= 400) {
+    throw new Error('找不到请求地址')
+  } else {
+    return response.json()
+  }
+}
+
 export const get = function(url, data, timeout) {
   let arr =[]
   for (const key in data) {
@@ -26,22 +44,4 @@ export const post = async (url, data={}, header={}, timeout) => { // 'applicatio
       return utilsResponse(response)
     })
   ])
-}
-
-function fetchTimeout(timeout) {
-  return  new Promise((resolve,reject) => { 
-    setTimeout(()=>{
-      reject(new Error('请求超时'))
-    }, timeout) 
-  })
-}
-
-function utilsResponse(response) {
-  if (response.status >= 500) {
-    throw new Error('服务器出错')
-  } else if (response.status >= 400) {
-    throw new Error('找不到请求地址')
-  } else {
-    return response.json()
-  }
 }

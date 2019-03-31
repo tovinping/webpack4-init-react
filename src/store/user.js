@@ -1,10 +1,5 @@
 import * as types from './types'
-let user = [
-  {
-    name: '初始化',
-    sex: '男'
-  }
-]
+let user = []
 export default function(state = user, action) {
   switch(action.type) {
     case types.ADD_USER:
