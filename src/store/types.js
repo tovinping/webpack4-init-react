@@ -1,0 +1,6 @@
+export const ADD_CATEGORY = 'ADD_CATEGORY'
+export const DEL_CATEGORY = 'DEL_CATEGORY'
+export const CHANGE_CATEGORY = 'CHANGE_CATEGORY'
+export const ADD_USER = 'ADD_USER'
+export const DEL_USER = 'DEL_USER'
+export const CHANGE_USER = 'CHANGE_USER'

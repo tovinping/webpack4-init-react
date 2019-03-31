@@ -1,0 +1,4 @@
+{
+  "presets": ["@babel/env", "@babel/react"],
+  "plugins": ["dynamic-import-webpack", ["@babel/plugin-proposal-decorators", { "legacy": true }]]
+}
