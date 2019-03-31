@@ -5,6 +5,19 @@ module.exports =merge(baseConfig, {
   // 开发模式
   mode: 'development',
   devtool: 'cheap-module-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.(css|scss)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
+      }
+    ]
+  },
   devServer: {
     host: '0.0.0.0',
     // 服务端口为1208
