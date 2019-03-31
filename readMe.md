@@ -9,13 +9,13 @@
 ```redux```
 ```reduxMiddleware(redux-logger[打印日志-生产环境不打印], redux-thunk[action中可以拿到dispathc和state])```
 ```HotModuleReplacement(react)```
-### 未完成：
-```sass/post-css```
-```图片处理```
 ```webpack-merge```
-```JS-chunkhash```
+```sass/post-css```
 ```CSS-contenthash```
+```JS-chunkhash```
+```webpack-split```
+### 未完成：
+```图片处理```
 ```vendor```
 ```esLint```
-```webpack-split```
 ```css改变了引入此css的js-hash也会改变不利缓存```

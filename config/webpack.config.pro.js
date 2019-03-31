@@ -1,8 +1,12 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base.js')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+// 清空之前打包文件
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+// 提取CSS
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+// 压缩CSS
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');//压缩css插件
 module.exports =merge(baseConfig, {
   mode: 'production',
   // 打包时只显示需要内容
@@ -12,23 +16,18 @@ module.exports =merge(baseConfig, {
     modules: false, 
     entrypoints: false,
     children: false
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(css|scss)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
-        ]
-      }
-    ]
+  },  
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   plugins: [
+    new CleanWebpackPlugin(),
+    new webpack.HashedModuleIdsPlugin(),
     new MiniCssExtractPlugin({
       filename: 'static/css/style.[contenthash:8].css'
-    })
+    }),
+    new OptimizeCssAssetsPlugin()
   ],
 })

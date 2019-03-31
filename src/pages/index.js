@@ -5,6 +5,7 @@ import Person from '../tools/decorator'
 import {testGet, testPost} from '../api/test'
 import Test from '../components/common/test'
 import '../assets/css/reset.scss'
+import '../assets/css/home.scss'
 
 class Home extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Home extends React.Component {
     this.getData = this.getData.bind(this)
   }
   componentDidMount() {
-    console.log('ENV============'+process.env.NODE_ENV)
+    console.log('ENV============:'+process.env.NODE_ENV)
   }
   btnClick() {
     this.props.history.push('/pageA')
