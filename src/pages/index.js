@@ -6,7 +6,8 @@ import {testGet, testPost} from '../api/test'
 import Test from '../components/common/test'
 import '../assets/css/reset.scss'
 import '../assets/css/home.scss'
-
+const img32kb = require('../assets/images/32kb.png')
+const img4kb = require('../assets/images/4kb.png')
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -41,6 +42,10 @@ class Home extends React.Component {
     return (
       <div>
         <Test />
+        <div className="img-list">
+        <img src={img32kb} alt=""/>
+        <img src={img4kb} alt=""/>
+        </div>
         <div className="flex">
           <span>one</span>
           <span>two</span>

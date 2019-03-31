@@ -14,8 +14,8 @@
 ```CSS-contenthash```
 ```JS-chunkhash```
 ```webpack-split```
-### 未完成：
 ```图片处理```
+### 未完成：
 ```vendor```
 ```esLint```
 ```css改变了引入此css的js-hash也会改变不利缓存```
