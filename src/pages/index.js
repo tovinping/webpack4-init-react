@@ -40,6 +40,10 @@ class Home extends React.Component {
     return (
       <div>
         <Test />
+        <div className="flex">
+          <span>one</span>
+          <span>two</span>
+        </div>
         <h2>componentStateList:</h2>
         {this.state.arr.map(item => <div key={item}>列表:{item}</div>)}
         <h2>reduxUserList:</h2>
