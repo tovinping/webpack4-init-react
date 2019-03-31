@@ -1,19 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../store/actions'
-import Person from '../tools/decorator'
-import {testGet, testPost} from '../api/test'
+// import Person from '../tools/decorator'
+import {testGet} from '../api/test'
 import Test from '../components/common/test'
 import '../assets/css/reset.scss'
 import '../assets/css/home.scss'
-
 const img32kb = require('../assets/images/32kb.webp')
 const img4kb = require('../assets/images/4kb.png')
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      arr: [1,3,5]
+      arr: [1, 3, 5, 7]
     };
     this.btnClick = this.btnClick.bind(this)
     this.addUser = this.addUser.bind(this)

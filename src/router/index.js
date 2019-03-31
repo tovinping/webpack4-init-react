@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import asyncCom from './async'
+import NotFound from '../pages/notFound'
+import Layout from '../components/layout'
 const Home = asyncCom(d => import('../pages/index'))
 const PageA = asyncCom(d => import('../pages/a'))
 const PageB = asyncCom(d => import('../pages/b'))
-import NotFound from '../pages/notFound'
-import Layout from '../components/layout'
 const routers = (
   <BrowserRouter>
     <Switch>
