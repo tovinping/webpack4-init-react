@@ -6,7 +6,8 @@ import {testGet, testPost} from '../api/test'
 import Test from '../components/common/test'
 import '../assets/css/reset.scss'
 import '../assets/css/home.scss'
-const img32kb = require('../assets/images/32kb.png')
+
+const img32kb = require('../assets/images/32kb.webp')
 const img4kb = require('../assets/images/4kb.png')
 class Home extends React.Component {
   constructor(props) {

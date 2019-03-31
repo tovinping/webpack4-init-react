@@ -31,17 +31,44 @@ module.exports = {
         ]
       },      
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|webp|gif|svg)$/,
         use: [
           {
             loader: 'url-loader',
             options: {
-              limit: 8192,
+              limit: 10000,
               name: '[hash:8].[ext]',
               outputPath: 'static/images'
             }
           }
         ]
+      },
+      {
+        test: /\.(mp4|webm)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: '[hash:8].[ext]',
+          outputPath: 'static/videos'
+        }
+      },
+      {
+        test: /\.(mp3|flac|aac)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: '[hash:8].[ext]',
+          outputPath: 'static/videos'
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: '[hash:8].[ext]',
+          outputPath: 'static/fonts'
+        }
       }
     ]
   },
