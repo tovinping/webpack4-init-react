@@ -14,6 +14,17 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: bundleJS
   },
+  resolve: {
+    alias: {
+      '@src': path.resolve(__dirname, '../src/'),
+      '@component': path.resolve(__dirname, '../src/components/'),
+      '@api': path.resolve(__dirname, '../src/api/'),
+      '@assets': path.resolve(__dirname, '../src/assets/'),
+      '@store': path.resolve(__dirname, '../src/store/'),
+      '@tools': path.resolve(__dirname, '../src/tools/')
+    },
+    extensions: ['.js', '.jsx', '.json', '.scss']
+  },
   module: {
     rules: [
       {
@@ -23,12 +34,7 @@ module.exports = {
       },      
       {
         test: /\.(css|scss)$/,
-        use: [
-          loaderCSS,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
-        ]
+        use: [loaderCSS, 'css-loader', 'postcss-loader', 'sass-loader']
       },      
       {
         test: /\.(png|jpg|webp|gif|svg)$/,

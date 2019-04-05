@@ -4,6 +4,11 @@ h1{
 h2{
   color: green;
 }
+.bg-img{
+  height: 130px;
+  background: url('~@assets/images/32kb.png');
+  background-size: 100% 100%;
+}
 .img-list{
   img{
     max-width: 100%;

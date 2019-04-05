@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import Router from './router'
 import store from './store'
-
+//TEST
 if (module.hot) {
   console.log('hotModuleReplacement')
   module.hot.accept();

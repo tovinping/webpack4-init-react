@@ -2,12 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../store/actions'
 // import Person from '../tools/decorator'
-import {testGet} from '../api/test'
-import Test from '../components/common/test'
-import '../assets/css/reset.scss'
-import '../assets/css/home.scss'
-const img32kb = require('../assets/images/32kb.webp')
-const img4kb = require('../assets/images/4kb.png')
+import {testGet} from '@api/test'
+import Test from '@src/components/common/test'
+import '@assets/css/reset.scss'
+import '@assets/css/home.scss'
+const img4kb = require('@assets/images/4kb.png')
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -43,7 +42,7 @@ class Home extends React.Component {
       <div>
         <Test />
         <div className="img-list">
-        <img src={img32kb} alt=""/>
+        <div className="bg-img"></div>
         <img src={img4kb} alt=""/>
         </div>
         <div className="flex">
